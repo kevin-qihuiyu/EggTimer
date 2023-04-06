@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  EggTimer
 //
-//  Created by Angela Yu on 08/07/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
+//  Created by Qihui Yu
 //
 
 import UIKit
@@ -56,7 +55,9 @@ class ViewController: UIViewController {
     @objc func updateCounter() {
         //example functionality
         if remainingTime > 0 {
-            print("\(remainingTime) seconds.")
+            let status = "Ready in \(remainingTime) minutes."
+            print(status)
+            titleLabel.text = status
             remainingTime -= 1
             progressBar.progress = 1 - Float(remainingTime)/Float(timerTime)
         } else {
